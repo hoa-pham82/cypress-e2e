@@ -17,7 +17,7 @@ describe('Test suite for GET pet status', () => {
 
 	it('Get pet status with invalid status', () => {
 		cy.getPet(invalidStatus).then(response => {
-			expect(response.status).equal(200)
+			expect(response.status).equal(400)
 			expect(response.body).to.be.empty
 		})
 	})
