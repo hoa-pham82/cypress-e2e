@@ -17,6 +17,7 @@ module.exports = defineConfig({
 			// generate intermediate JSON reports
 			json: true,
 		},
+		baseUrl: 'http://localhost:3000/',
 	},
 	env: {
 		baseUrl: 'https://petstore.swagger.io/v2/pet',

@@ -1,6 +1,7 @@
 node_modules
 cypress/results
 cypress/screenshots
+cypress/downloads
 package-lock.json
 mochawesome-report
 game.py

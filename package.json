@@ -13,12 +13,14 @@
 		"clean-report": "rmdir /s /q \"cypress/results/",
 		"cy:run:get": "cypress run --spec cypress/e2e/API/petStore/GET_Pet_Status.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
 		"cy:run:post": "cypress run --spec cypress/e2e/API/petStore/POST_Add_New_Pet.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
-		"cy:run:put": "cypress run --spec cypress/e2e/API/petStore/PUT_Update_Pet.test.js --env baseUrl=https://petstore.swagger.io/v2/pet"
+		"cy:run:put": "cypress run --spec cypress/e2e/API/petStore/PUT_Update_Pet.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
+		"cy:ui": "cypress run --browser chrome --headed --spec cypress/e2e/**/**/transferFlow.test.js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"cy2": "^4.0.6",
 		"cypress": "^12.7.0",
 		"marge": "^1.0.1",
 		"mochawesome": "^7.1.3",
