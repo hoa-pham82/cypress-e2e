@@ -22,6 +22,8 @@ This workspace to run E2E test for API and UI - MARSAIR challenge
 
 `npm run cy:ui:chrome`
 
+3. Report will be saved in `mochawesome-report` folder in local
+
 ### 👨‍🌾 **Project structure**
 
 ![image info](image.png)
