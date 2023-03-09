@@ -5,16 +5,14 @@
 	"main": "cypress.config.js",
 	"scripts": {
 		"cy:open": "cypress open",
-		"cy:run": "npm run clean-report && cypress run && npm run merge-build-report",
+		"cy:run": "cypress run && npm run merge-build-report",
 		"cy:run-first": "cypress run",
 		"merge-report": "mochawesome-merge \"cypress/results/*.json\" > mochawesome.json",
 		"build-report": "marge mochawesome.json",
 		"merge-build-report": "npm run merge-report && npm run build-report",
 		"clean-report": "rmdir /s /q \"cypress/results/",
-		"cy:run:get": "cypress run --spec cypress/e2e/API/petStore/GET_Pet_Status.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
-		"cy:run:post": "cypress run --spec cypress/e2e/API/petStore/POST_Add_New_Pet.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
-		"cy:run:put": "cypress run --spec cypress/e2e/API/petStore/PUT_Update_Pet.test.js --env baseUrl=https://petstore.swagger.io/v2/pet",
-		"cy:ui": "cypress run --browser chrome --headed --spec cypress/e2e/**/**/transferFlow.test.js"
+		"cy:search": "cypress run --spec cypress/e2e/**/GET_Mars_Seats.test.js",
+		"cy:ui:chrome": "cypress run --browser chrome --headed --spec cypress/e2e/**/searchWithPromotionCode.test.js"
 	},
 	"keywords": [],
 	"author": "",

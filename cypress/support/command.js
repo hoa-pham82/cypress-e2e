@@ -24,43 +24,21 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-const header = { accept: 'application/json' }
-let postBody = (name, status) => {
+const header = { authority: 'marsair.recruiting.thoughtworks.net' }
+const buildQuery = (departing, returning, promotionCode = '') => {
 	return {
-		name: name,
-		photoUrls: ['string'],
-		status: status,
+		departing: departing,
+		returning: returning,
+		promotional_code: promotionCode,
 	}
 }
 
-// Get pet status
-Cypress.Commands.add('getPet', status => {
-	cy.request({
-		method: 'GET',
-		url: Cypress.env('baseUrl') + '/' + 'findByStatus',
-		headers: header,
-		qs: {
-			status,
-		},
-	})
-})
-
-// Add new pet to the store
-Cypress.Commands.add('addNewPet', (name, status) => {
+// Create a command to send a search request
+Cypress.Commands.add('searchASeat', (departing, returning, promotionCode) => {
 	cy.request({
 		method: 'POST',
 		url: Cypress.env('baseUrl'),
 		headers: header,
-		body: postBody(name, status),
-	})
-})
-
-// Update existing pet
-Cypress.Commands.add('updatePet', (petName, newStatus) => {
-	cy.request({
-		method: 'PUT',
-		url: Cypress.env('baseUrl'),
-		headers: header,
-		body: postBody(petName, newStatus),
+		qs: buildQuery(departing, returning, promotionCode),
 	})
 })

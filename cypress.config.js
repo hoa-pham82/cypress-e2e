@@ -3,6 +3,7 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
 	e2e: {
 		specPattern: 'cypress/e2e/**/*.test.{js,jsx,ts,tsx}',
+		screenshotOnRunFailure: true,
 		video: false,
 		setupNodeEvents(on, config) {
 			// implement node event listeners here
@@ -17,9 +18,9 @@ module.exports = defineConfig({
 			// generate intermediate JSON reports
 			json: true,
 		},
-		baseUrl: 'http://localhost:3000/',
+		baseUrl: 'https://marsair.recruiting.thoughtworks.net/HoaPham',
 	},
 	env: {
-		baseUrl: 'https://petstore.swagger.io/v2/pet',
+		baseUrl: 'https://marsair.recruiting.thoughtworks.net/HoaPham',
 	},
 })
