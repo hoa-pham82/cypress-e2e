@@ -6,7 +6,7 @@ This workspace to run E2E test for API and UI - MARSAIR challenge
 
 1. Clone the repository
 
-`git clone `
+`git clone -b marsair-challenge https://github.com/hoa-pham82/cypress-e2e.git`
 
 2. Install Cypress and dependencies
 
