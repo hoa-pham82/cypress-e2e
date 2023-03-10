@@ -4,5 +4,4 @@ cypress/screenshots
 cypress/downloads
 package-lock.json
 mochawesome-report
-game.py
 mochawesome.json
