@@ -2,6 +2,12 @@
 
 This workspace to run E2E test for API and UI - MARSAIR challenge
 
+Implemented scenarios:
+
+1. API: Verify the potential customer is able to search without promotional code and get available seats
+2. API: Verify the potential customer is able to search without promotion code and get no available seats
+3. UI: Verify the potential customer is able to search with the invalid promotional code and get available seats
+
 ### 🛠️ **Installation**
 
 1. Clone the repository
